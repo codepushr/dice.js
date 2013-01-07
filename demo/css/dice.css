@@ -1,0 +1,90 @@
+
+.diceBox {
+  -webkit-perspective: 600; 
+  -webkit-perspective-origin: 50% 200px;
+  -moz-perspective: 600; 
+  -moz-perspective-origin: 50% 200px;
+
+  float: left;
+  border: 1px solid red;
+  width: 400px;
+  height: 400px;
+}
+
+.diceCube {
+  position: relative;
+  margin: 100px auto;
+  height: 200px;
+  width: 200px;
+  -webkit-transition: -webkit-transform 2s ease-out;
+  -webkit-transform-style: preserve-3d;
+
+  -moz-transition: -moz-transform 2s ease-out;
+  -moz-transform-style: preserve-3d;
+}
+
+.face {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background-color: rgba(50, 50, 50, 0.9);
+  font-size: 27px;
+  line-height: 1em;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 3px;
+}   
+
+.side1  {
+  background-image: url(../img/face1.svg);
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+
+  -webkit-transform: rotateX(90deg) translateZ(100px);
+  -moz-transform: rotateX(90deg) translateZ(100px);
+}
+
+.side2 {
+  background-image: url(../img/face3.svg);
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+
+  -webkit-transform: translateZ(100px);
+  -moz-transform: translateZ(100px);
+}
+
+.side3 {
+  background-image: url(../img/face2.svg);
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+
+  -webkit-transform: rotateY(90deg) translateZ(100px);
+  -moz-transform: rotateY(90deg) translateZ(100px);
+}
+
+.side4 {
+  background-image: url(../img/face4.svg);
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+
+  -webkit-transform: rotateY(180deg) translateZ(100px);
+  -moz-transform: rotateY(180deg) translateZ(100px);
+}
+
+.side5 {
+  background-image: url(../img/face5.svg);
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+
+  -webkit-transform: rotateY(-90deg) translateZ(100px);
+  -moz-transform: rotateY(-90deg) translateZ(100px);
+}
+
+.side6 {
+  background-image: url(../img/face6.svg);
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  
+  -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(100px);
+  -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(100px);
+}
