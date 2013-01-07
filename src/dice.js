@@ -9,8 +9,8 @@ var Dice = Dice || (function () {
 
     // main properties
     var _dices = [],
-        _buildingNum,
-        _ignore,
+        _buildingNum = 0,
+        _ignore = 0,
         _args = {
             animate : false,
             debug : false, 
