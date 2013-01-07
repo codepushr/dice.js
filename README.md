@@ -29,16 +29,16 @@ You can even define optional arguments to override some default values:
 		animate : true,
 		debug : true, 
 		diceFaces : 6,
-		diceSize: 200,
-		diceCls : { 
+		diceSize: 200,	// px
+		diceCls : { 	// class names
 			box : 'diceBox', 
 			cube : 'diceCube',
 			face : 'face',
 			side : 'side'
 		},
 		wrapper : 'diceHolder',
-		xRange : [8, 16],
-		yRange : [8, 16],
+		xRange : [8, 16],  // min and max turns in x axis
+		yRange : [8, 16],  // min and max turns in y axis
 	});
   
 </script>
