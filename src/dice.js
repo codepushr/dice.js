@@ -2,7 +2,7 @@
  * Copyright (c) 2013 Aleksandar Palic
  * Released under MIT license 
  * Find me on Twitter: @_skripted
- * Version: 1.1
+ * Version: 1.2
  */
 
 var Dice = Dice || (function () {
@@ -228,11 +228,12 @@ var Dice = Dice || (function () {
     /**
      * @method animateDiceElements
      */
-    function animateDiceElements () {
+    function animateDiceElements (callback) {
         for (var dice in _dices) {
             _dices[dice].div.style[_cssProp] = 'rotateX(' + _dices[dice].turns[0] * 90 + 'deg) ' + 
                 ' rotateY(' + _dices[dice].turns[1] * 90 + 'deg)';
         }
+        if (callback) callback();
     }
 
     /**
@@ -303,8 +304,8 @@ var Dice = Dice || (function () {
         /**
          * @method animate
          */
-        animate : function () {
-            if(_animationPrepared) animateDiceElements();
+        animate : function (callback) {
+            if(_animationPrepared) animateDiceElements(callback);
         }
     }
 
