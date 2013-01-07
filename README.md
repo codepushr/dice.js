@@ -92,4 +92,5 @@ Roadmap
 ---------------------------------------
 
 There's still things to do. Currently it is possible to give more than 6 faces for the dice - 
-but they will not yet affect the animation (which is 6 faces static at the moment).
+but they will only affect the simple calculation when not animating. 
+It does not yet affect the animation (which is 6 faces static at the moment)!
