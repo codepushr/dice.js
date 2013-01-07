@@ -30,7 +30,7 @@ You can even define optional arguments to override some default values:
   window.onload = function() {                     
   
     var result = Dice.init(15, 10, { 
-  		animate : true, // if animating
+  			animate : true, // if animating
 			debug : true, // to debug to console
 			diceFaces : 6, // dice face number
 			parent : 'diceHolder', // id of the parent
