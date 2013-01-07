@@ -47,7 +47,14 @@ If you specified to create and animate dice you can trigger it this way:
 ```html
 <button onclick="Dice.animate()">Animate</button>
 ```
-
+Or this way directly in the JavaScript (you can even pass a callback!):
+```javascript
+document.getElementById('button').addEventListener('click', function () {
+	Dice.animate(function () {
+		document.getElementById('result').innerHTML = 'Result: ' + result;
+	});
+});
+```
 When animating be sure to add the following rules to your CSS stylesheet:
 ```css
 .diceBox {
