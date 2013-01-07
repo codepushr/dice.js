@@ -77,3 +77,14 @@ When animating be sure to add the following rules to your CSS file:
 	border-radius: 3px;
 } 
 ```
+Also don't forget the rules for all six sides (optionally with images):
+```css
+.side1  {
+  background-image: url(../img/face1.svg);
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+
+  -webkit-transform: rotateX(90deg) translateZ(100px);
+  -moz-transform: rotateX(90deg) translateZ(100px);
+}
+```
