@@ -29,7 +29,7 @@ You can even define optional arguments to override some default values:
         animate : true,		// if animating
         debug : true,		// to debug to console
         diceFaces : 6,		// dice face number
-        parent : 'diceHolder',	// id of the parent
+        wrapper : 'diceHolder',	// id of the parent
         xRange : [8, 16],	// x turns min and max
         yRange : [8, 16],	// y turns min and max
         cssProp : 'WebkitTransform' // translate property
