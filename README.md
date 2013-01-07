@@ -9,7 +9,7 @@ Basic Usage
 
 Include the main JavaScript file in the bottom of your HTML document:
 ```html
-<script type="text/javascript" src="dice.js"></script>
+<script type="text/javascript" src="dice.min.js"></script>
 ```
 Create a variable to hold the result and call the Object's init() method:
 ```html
