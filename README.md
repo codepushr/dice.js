@@ -98,7 +98,7 @@ It does not yet affect the animation (which is 6 faces static at the moment)!
 
 License Information
 ---------------------------------------
-Copyright 2013 Aleksandar Palic - http://www.twitter.com/_skripted
+Copyright 2013 - by Aleksandar Palic - http://www.twitter.com/_skripted
 
 
 Permission is hereby granted, free of charge, to any person obtaining
