@@ -7,46 +7,46 @@ Basic Usage
 ---------------------------------------
 
 Include the main JavaScript file in the bottom of your HTML document:
-
-    <script type="text/javascript" src="dice.js"></script>
-
+```html
+<script type="text/javascript" src="dice.js"></script>
+```
 Create some return variable and call the Dice Object's init() method:
+```html
+<script type="text/javascript">
 
-    <script type="text/javascript">
-    
-      window.onload = function() {                     
-      
-        var result = Dice.init(15, 10);
-      	console.log(result);
-      
-      };
-      
-    </script>
-    
+  window.onload = function() {                     
+  
+    var result = Dice.init(15, 10);
+  	console.log(result);
+  
+  };
+  
+</script>
+```    
 You can even define optional arguments to override some default values:
+```html
+<script type="text/javascript">
 
-    <script type="text/javascript">
+  window.onload = function() {                     
+  
+    var result = Dice.init(15, 10, { 
+  		animate : true, // if animating
+			debug : true, // to debug to console
+			diceFaces : 6, // dice face number
+			parent : 'diceHolder', // id of the parent
+			xRange : [8, 16], // x turns min and max
+			yRange : [8, 16], // y turns min and max
+			cssProp : 'WebkitTransform' // translate property
+		});
     
-      window.onload = function() {                     
-      
-        var result = Dice.init(15, 10, { 
-      		animate : true, // if animating
-    			debug : true, // to debug to console
-    			diceFaces : 6, // dice face number
-    			parent : 'diceHolder', // id of the parent
-    			xRange : [8, 16], // x turns min and max
-    			yRange : [8, 16], // y turns min and max
-    			cssProp : 'WebkitTransform' // translate property
-    		});
-        
-        console.log(result);
-      
-      };
-      
-    </script>
-
+    console.log(result);
+  
+  };
+  
+</script>
+```
 When animating be sure to add the following rules to your CSS file:
-
+```css
     .diceBox {
       -webkit-perspective: 600; 
       -webkit-perspective-origin: 50% 200px;
@@ -82,5 +82,4 @@ When animating be sure to add the following rules to your CSS file:
       border: 1px solid #555;
       border-radius: 3px;
     } 
-
-
+```
