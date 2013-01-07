@@ -25,14 +25,20 @@ You can even define optional arguments to override some default values:
 ```html
 <script type="text/javascript">
 
-    var result = Dice.init(15, 10, { 
-        animate : true,		// if animating
-        debug : true,		// to debug to console
-        diceFaces : 6,		// dice face number
-        wrapper : 'diceHolder',	// id of the parent
-        xRange : [8, 16],	// x turns min and max
-        yRange : [8, 16],	// y turns min and max
-        cssProp : 'WebkitTransform' // translate property
+    var result = Dice.init(14, 1, {
+	animate : true,
+	debug : true, 
+	diceFaces : 6,
+	diceSize: 200,
+	diceCls : { 
+	    box : 'diceBox', 
+	    cube : 'diceCube',
+	    face : 'face',
+	    side : 'side'
+	},
+	wrapper : 'diceHolder',
+	xRange : [8, 16],
+	yRange : [8, 16],
     });
   
 </script>
@@ -40,40 +46,25 @@ You can even define optional arguments to override some default values:
 When animating be sure to add the following rules to your CSS stylesheet:
 ```css
 .diceBox {
-	-webkit-perspective: 600; 
-	-webkit-perspective-origin: 50% 200px;
-	-moz-perspective: 600; 
-	-moz-perspective-origin: 50% 200px;
-	
-	float: left;
-	border: 1px solid red;
-	width: 400px;
-	height: 400px;
+  float: left;
+  border: 1px solid red;
 }
 
 .diceCube {
-	position: relative;
-	margin: 100px auto;
-	height: 200px;
-	width: 200px;
-	-webkit-transition: -webkit-transform 2s ease-out;
-	-webkit-transform-style: preserve-3d;
-	
-	-moz-transition: -moz-transform 2s ease-out;
-	-moz-transform-style: preserve-3d;
+  position: relative;
+  -webkit-transition: -webkit-transform 2s ease-out;
+  -webkit-transform-style: preserve-3d;
+
+  -moz-transition: -moz-transform 2s ease-out;
+  -moz-transform-style: preserve-3d;
 }
 
 .face {
-	position: absolute;
-	height: 200px;
-	width: 200px;
-	background-color: rgba(50, 50, 50, 0.9);
-	font-size: 27px;
-	line-height: 1em;
-	color: #fff;
-	border: 1px solid #555;
-	border-radius: 3px;
-} 
+  position: absolute;
+  background-color: rgba(50, 50, 50, 0.9);
+  border: 1px solid #555;
+  border-radius: 3px;
+}   
 ```
 Also don't forget the rules for all sides of the cube (optionally with images):
 ```css
@@ -82,9 +73,6 @@ Also don't forget the rules for all sides of the cube (optionally with images):
   background-image: url(../img/face1.svg);
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
-
-  -webkit-transform: rotateX(90deg) translateZ(100px);
-  -moz-transform: rotateX(90deg) translateZ(100px);
 }
 ```
 Roadmap
