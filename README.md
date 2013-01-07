@@ -45,7 +45,8 @@ You can even define optional arguments to override some default values:
 ```
 If you specified to create and animate dice you can trigger it this way:
 ```html
-<button onclick="Dice.animate()">Animate</button>
+<button id="button" onclick="Dice.animate()">Animate</button>
+<div id="result"></div>
 ```
 Or this way directly in the JavaScript (you can even pass a callback!):
 ```javascript
