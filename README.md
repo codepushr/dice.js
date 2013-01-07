@@ -25,21 +25,21 @@ You can even define optional arguments to override some default values:
 ```html
 <script type="text/javascript">
 
-    var result = Dice.init(14, 1, {
-	animate : true,
-	debug : true, 
-	diceFaces : 6,
-	diceSize: 200,
-	diceCls : { 
-	    box : 'diceBox', 
-	    cube : 'diceCube',
-	    face : 'face',
-	    side : 'side'
-	},
-	wrapper : 'diceHolder',
-	xRange : [8, 16],
-	yRange : [8, 16],
-    });
+	var result = Dice.init(14, 1, {
+		animate : true,
+		debug : true, 
+		diceFaces : 6,
+		diceSize: 200,
+		diceCls : { 
+			box : 'diceBox', 
+			cube : 'diceCube',
+			face : 'face',
+			side : 'side'
+		},
+		wrapper : 'diceHolder',
+		xRange : [8, 16],
+		yRange : [8, 16],
+	});
   
 </script>
 ```
