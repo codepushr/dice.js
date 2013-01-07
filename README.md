@@ -77,8 +77,9 @@ When animating be sure to add the following rules to your CSS file:
 	border-radius: 3px;
 } 
 ```
-Also don't forget the rules for all six sides (optionally with images):
+Also don't forget the rules for all sides of the cube (optionally with images):
 ```css
+/* one of six ... */
 .side1  {
   background-image: url(../img/face1.svg);
   -webkit-background-size: 100% 100%;
