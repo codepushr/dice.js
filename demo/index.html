@@ -10,6 +10,7 @@
 	<div id="diceHolder">
 	</div>
 	<button onclick="Dice.animate()">Animate</button>
+    <div id="result">Result:</div>
 
 	<script src="../src/dice.min.js"></script>
 	<script>
@@ -30,6 +31,7 @@
             yRange : [8, 16],
         });
 
+        document.getElementById('result').innerHTML = 'Result: ' + result;
         console.log(result);
 
 	</script>
