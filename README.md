@@ -11,7 +11,7 @@ Include the main JavaScript file in the bottom of your HTML document:
 ```html
 <script type="text/javascript" src="dice.js"></script>
 ```
-Create some return variable and call the Dice Object's init() method:
+Create a variable to hold the result and call the Object's init() method:
 ```html
 <script type="text/javascript">
                  
@@ -37,7 +37,7 @@ You can even define optional arguments to override some default values:
   
 </script>
 ```
-When animating be sure to add the following rules to your CSS file:
+When animating be sure to add the following rules to your CSS stylesheet:
 ```css
 .diceBox {
 	-webkit-perspective: 600; 
@@ -91,7 +91,7 @@ Roadmap
 ---------------------------------------
 
 There's still things to do. Currently it is possible to give more than 6 faces for the dice - 
-but they will only affect the simple calculation when not animating. 
+but they will only affect the calculation when not animating. 
 It does not yet affect the animation (which is 6 faces static at the moment)!
 
 License Information
