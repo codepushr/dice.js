@@ -15,7 +15,7 @@ var Dice = Dice || (function () {
             animate : false,
             debug : false, 
             diceFaces : 6, 
-            diceHolder : 'body',
+            parent : 'body',
             xRange : [8, 16],
             yRange : [8, 16],
             cssProp : 'transform:WebkitTransform:MozTransform:OTransform:msTransform'
