@@ -9,21 +9,28 @@
 <body>
 	<div id="diceHolder">
 	</div>
-	
+	<button onclick="Dice.animate()">Animate</button>
+
 	<script src="../src/dice.min.js"></script>
 	<script>
 
-		var result = Dice.init(15, 10, { 
-			animate : true,
-			debug : true, 
-			diceFaces : 6, 
-			parent : 'diceHolder',
-			xRange : [8, 16],
-			yRange : [8, 16],
-			cssProp : 'WebkitTransform'
-		});
+        var result = Dice.init(14, 1, {
+            animate : true,
+            debug : true, 
+            diceFaces : 6,
+            diceSize: 200,
+            diceCls : { 
+                box : 'diceBox', 
+                cube : 'diceCube',
+                face : 'face',
+                side : 'side'
+            },
+            wrapper : 'diceHolder',
+            xRange : [8, 16],
+            yRange : [8, 16],
+        });
 
-		console.log(result);
+        console.log(result);
 
 	</script>
 </body>
