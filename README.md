@@ -13,15 +13,11 @@ Include the main JavaScript file in the bottom of your HTML document:
 Create some return variable and call the Dice Object's init() method:
 ```html
 <script type="text/javascript">
-
-  window.onload = function() {                     
-  
-    // param1: number to divide among multiple dices
+                 
+    // param1: number to divide among multiple dice
     // param2: number to be ignored (in the random generator)
     var result = Dice.init(15, 10);
-  	console.log(result);
-  
-  };
+    console.log(result);
   
 </script>
 ```    
@@ -29,8 +25,6 @@ You can even define optional arguments to override some default values:
 ```html
 <script type="text/javascript">
 
-  window.onload = function() {                     
-  
     var result = Dice.init(15, 10, { 
         animate : true,		// if animating
         debug : true,		// to debug to console
@@ -42,8 +36,6 @@ You can even define optional arguments to override some default values:
     });
     
     console.log(result);
-  
-  };
   
 </script>
 ```
