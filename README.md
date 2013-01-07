@@ -16,6 +16,8 @@ Create some return variable and call the Dice Object's init() method:
 
   window.onload = function() {                     
   
+    // param1: number to divide among multiple dices
+    // param2: number to be ignored (in the random generator)
     var result = Dice.init(15, 10);
   	console.log(result);
   
@@ -30,13 +32,13 @@ You can even define optional arguments to override some default values:
   window.onload = function() {                     
   
     var result = Dice.init(15, 10, { 
-	animate : true, // if animating
-	debug : true, // to debug to console
-	diceFaces : 6, // dice face number
-	parent : 'diceHolder', // id of the parent
-	xRange : [8, 16], // x turns min and max
-	yRange : [8, 16], // y turns min and max
-	cssProp : 'WebkitTransform' // translate property
+        animate : true,		// if animating
+        debug : true,		// to debug to console
+        diceFaces : 6,		// dice face number
+        parent : 'diceHolder',	// id of the parent
+        xRange : [8, 16],	// x turns min and max
+        yRange : [8, 16],	// y turns min and max
+        cssProp : 'WebkitTransform' // translate property
     });
     
     console.log(result);
