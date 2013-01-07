@@ -2,6 +2,7 @@ Dice.js
 =======================================
 
 A lightweight JavaScript library for random animated dice or simple calculated dice results.
+<a href="http://skripted.github.com/dice.js/demo/">Check out the Demo (when animating)</a>
 
 Basic Usage
 ---------------------------------------
