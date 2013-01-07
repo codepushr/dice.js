@@ -30,14 +30,14 @@ You can even define optional arguments to override some default values:
   window.onload = function() {                     
   
     var result = Dice.init(15, 10, { 
-  			animate : true, // if animating
-			debug : true, // to debug to console
-			diceFaces : 6, // dice face number
-			parent : 'diceHolder', // id of the parent
-			xRange : [8, 16], // x turns min and max
-			yRange : [8, 16], // y turns min and max
-			cssProp : 'WebkitTransform' // translate property
-		});
+	animate : true, // if animating
+	debug : true, // to debug to console
+	diceFaces : 6, // dice face number
+	parent : 'diceHolder', // id of the parent
+	xRange : [8, 16], // x turns min and max
+	yRange : [8, 16], // y turns min and max
+	cssProp : 'WebkitTransform' // translate property
+    });
     
     console.log(result);
   
@@ -47,39 +47,39 @@ You can even define optional arguments to override some default values:
 ```
 When animating be sure to add the following rules to your CSS file:
 ```css
-    .diceBox {
-      -webkit-perspective: 600; 
-      -webkit-perspective-origin: 50% 200px;
-      -moz-perspective: 600; 
-      -moz-perspective-origin: 50% 200px;
+.diceBox {
+	-webkit-perspective: 600; 
+	-webkit-perspective-origin: 50% 200px;
+	-moz-perspective: 600; 
+	-moz-perspective-origin: 50% 200px;
+	
+	float: left;
+	border: 1px solid red;
+	width: 400px;
+	height: 400px;
+}
 
-      float: left;
-      border: 1px solid red;
-      width: 400px;
-      height: 400px;
-    }
+.diceCube {
+	position: relative;
+	margin: 100px auto;
+	height: 200px;
+	width: 200px;
+	-webkit-transition: -webkit-transform 2s ease-out;
+	-webkit-transform-style: preserve-3d;
+	
+	-moz-transition: -moz-transform 2s ease-out;
+	-moz-transform-style: preserve-3d;
+}
 
-    .diceCube {
-      position: relative;
-      margin: 100px auto;
-      height: 200px;
-      width: 200px;
-      -webkit-transition: -webkit-transform 2s ease-out;
-      -webkit-transform-style: preserve-3d;
-    
-      -moz-transition: -moz-transform 2s ease-out;
-      -moz-transform-style: preserve-3d;
-    }
-    
-    .face {
-      position: absolute;
-      height: 200px;
-      width: 200px;
-      background-color: rgba(50, 50, 50, 0.9);
-      font-size: 27px;
-      line-height: 1em;
-      color: #fff;
-      border: 1px solid #555;
-      border-radius: 3px;
-    } 
+.face {
+	position: absolute;
+	height: 200px;
+	width: 200px;
+	background-color: rgba(50, 50, 50, 0.9);
+	font-size: 27px;
+	line-height: 1em;
+	color: #fff;
+	border: 1px solid #555;
+	border-radius: 3px;
+} 
 ```
