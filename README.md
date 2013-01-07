@@ -17,7 +17,6 @@ Create some return variable and call the Dice Object's init() method:
     // param1: number to divide among multiple dice
     // param2: number to be ignored (in the random generator)
     var result = Dice.init(15, 10);
-    console.log(result);
   
 </script>
 ```    
@@ -34,8 +33,6 @@ You can even define optional arguments to override some default values:
         yRange : [8, 16],	// y turns min and max
         cssProp : 'WebkitTransform' // translate property
     });
-    
-    console.log(result);
   
 </script>
 ```
