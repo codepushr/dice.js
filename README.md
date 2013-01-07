@@ -43,6 +43,11 @@ You can even define optional arguments to override some default values:
   
 </script>
 ```
+If you specified to create and animate dice you can trigger it this way:
+```html
+<button onclick="Dice.animate()">Animate</button>
+```
+
 When animating be sure to add the following rules to your CSS stylesheet:
 ```css
 .diceBox {
