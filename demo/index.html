@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>CSS3 Dice Demo</title>
+	<link rel="stylesheet" href="css/dice.css" />	
+</head>
+<body>
+	<div id="diceHolder">
+	</div>
+	
+	<script src="../src/dice.js"></script>
+	<script>
+
+		var result = Dice.Init(15, 10, { 
+			animate : true,
+			debug : true, 
+			diceFaces : 6, 
+			parent : 'diceHolder',
+			xRange : [8, 16],
+			yRange : [8, 16],
+			cssProp : 'WebkitTransform'
+		});
+
+		console.log(result);
+
+	</script>
+</body>
+</html>
