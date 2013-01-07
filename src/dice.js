@@ -225,11 +225,11 @@ var Dice = Dice || (function () {
     // public functions
     return {
         /**
-         * @method Init (pseudo constructor)
+         * @method init
          * @param {Number, Number, Object} buildingNum, ignore, args
          * @return {Function} startEngine()
          */
-        Init : function (buildingNum, ignore, args) {
+        init : function (buildingNum, ignore, args) {
 
             // construct attributes
             _buildingNum = buildingNum;
