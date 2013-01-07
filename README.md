@@ -88,3 +88,8 @@ Also don't forget the rules for all six sides (optionally with images):
   -moz-transform: rotateX(90deg) translateZ(100px);
 }
 ```
+Roadmap
+---------------------------------------
+
+There's still things to do. Currently it is possible to give more than 6 faces for the dice - 
+but they will not yet affect the animation (which is 6 faces static at the moment).
