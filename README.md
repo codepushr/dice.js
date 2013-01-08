@@ -13,13 +13,11 @@ Include the main JavaScript file in the bottom of your HTML document:
 ```
 When not animating create a variable to hold the result and call the Object's init() method:
 ```html
-<script type="text/javascript">
-                 
+<script type="text/javascript">     
     // param1: number to divide among multiple dice
     // param2: number to be ignored (in the random generator)
     var result = Dice.init(15, 10);
     console.log(result);
-  
 </script>
 ```    
 When animating define additional arguments and optionally override some default values:
