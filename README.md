@@ -45,7 +45,7 @@ When animating define additional arguments and optionally override some default 
 	
 	// get animation result
 	var result = Dice.animate();
-    	console.log(result);
+	console.log(result);
 </script>
 ```
 If you specified to create and animate dice you can trigger it this way from the HTML:
