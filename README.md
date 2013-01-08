@@ -30,7 +30,7 @@ When animating define additional arguments and optionally override some default 
 	Dice.init(14, 1, {
 		animate : true,
 		debug : true, 
-		diceFaces : 6,
+		diceFaces : 6,	// work in progress
 		diceSize: 200,	// px
 		diceCls : { 	// class names
 			box : 'diceBox', 
