@@ -15,12 +15,11 @@
 	<script src="../src/dice.js"></script>
 	<script>
 
+        // without animation
         var result = Dice.init(14, 10);
-
         console.log(result);
 
-        
-
+        // with animation and eventlistener
         Dice.init(14, 10, {
             animate : true,
             debug : true, 
@@ -40,9 +39,7 @@
         document.getElementById('button').addEventListener('click', function () {
             
             var result = Dice.animate();
-
             document.getElementById('result').innerHTML = 'Result: ' + result;
-            console.log(result);
 
         });
 
