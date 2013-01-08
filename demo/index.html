@@ -12,10 +12,16 @@
 	<button id="button">Animate</button>
     <div id="result">Result: -</div>
 
-	<script src="../src/dice.min.js"></script>
+	<script src="../src/dice.js"></script>
 	<script>
 
-        var result = Dice.init(14, 1, {
+        var result = Dice.init(14, 10);
+
+        console.log(result);
+
+        
+
+        Dice.init(14, 10, {
             animate : true,
             debug : true, 
             diceFaces : 6,
@@ -27,17 +33,20 @@
                 side : 'side'
             },
             wrapper : 'diceHolder',
-            xRange : [8, 16],
-            yRange : [8, 16],
+            xRange : [0, 20],
+            yRange : [0, 20],
         });
-
-        console.log(result);
 
         document.getElementById('button').addEventListener('click', function () {
-            Dice.animate(function () {
-                document.getElementById('result').innerHTML = 'Result: ' + result;
-            });
+            
+            var result = Dice.animate();
+
+            document.getElementById('result').innerHTML = 'Result: ' + result;
+            console.log(result);
+
         });
+
+        
 
 	</script>
 </body>
