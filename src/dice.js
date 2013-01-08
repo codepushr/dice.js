@@ -147,9 +147,7 @@ var Dice = Dice || (function () {
             diceTurns, 
             diceResult;
 
-        while (wrapper.firstChild) {
-            wrapper.removeChild(wrapper.firstChild);
-        }
+        resetDiceElements(wrapper);
 
         for (var i = 0; i < _diceNumber; i ++) {
             diceBox = fnCreateElement('div', 'dice_' + i, _args.diceCls.box);
@@ -173,6 +171,17 @@ var Dice = Dice || (function () {
     }
 
     /**
+     * @method createDiceElements
+     * @param {Element} wrapper
+     */
+    function resetDiceElements (wrapper) {
+        while (wrapper.firstChild) {
+            wrapper.removeChild(wrapper.firstChild);
+        }
+        _dice = [];
+    }
+
+    /**
      * @method generateDiceRotation
      */
     function generateDiceRotation () {
@@ -180,7 +189,6 @@ var Dice = Dice || (function () {
             diceTurns,
             diceResult;
 
-        // reset rotations and results
         _diceRotation = [];
 
         for(var i = 0; i < _diceNumber; i ++) {
