@@ -23,6 +23,10 @@ When not animating create a variable to hold the result and call the Object's in
 When animating define additional arguments and optionally override some default values:
 ```html
 <script type="text/javascript">
+	// define animation
+	Dice.init(14, 1, { animate : true });
+	
+	// override some default values
 	Dice.init(14, 1, {
 		animate : true,
 		debug : true, 
@@ -38,6 +42,10 @@ When animating define additional arguments and optionally override some default 
 		xRange : [0, 20],  // min and max turns in x axis
 		yRange : [0, 20],  // min and max turns in y axis
 	});
+	
+	// get animation result
+	var result = Dice.animate();
+    	console.log(result);
 </script>
 ```
 If you specified to create and animate dice you can trigger it this way from the HTML:
