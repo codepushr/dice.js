@@ -11,24 +11,26 @@ Include the main JavaScript file in the bottom of your HTML document:
 ```html
 <script type="text/javascript" src="dice.min.js"></script>
 ```
-Create a variable to hold the result and call the Object's init() method:
+When not animating create a variable to hold the result and call the Object's init() method:
 ```html
-<script type="text/javascript">
-                 
+<script type="text/javascript">     
     // param1: number to divide among multiple dice
     // param2: number to be ignored (in the random generator)
     var result = Dice.init(15, 10);
-  
+    console.log(result);
 </script>
 ```    
-You can even define optional arguments to override some default values:
+When animating define additional arguments and optionally override some default values:
 ```html
 <script type="text/javascript">
-
-	var result = Dice.init(14, 1, {
+	// define animation
+	Dice.init(14, 1, { animate : true });
+	
+	// or override some more default values
+	Dice.init(14, 1, {
 		animate : true,
 		debug : true, 
-		diceFaces : 6,
+		diceFaces : 6,	// work in progress
 		diceSize: 200,	// px
 		diceCls : { 	// class names
 			box : 'diceBox', 
@@ -36,27 +38,30 @@ You can even define optional arguments to override some default values:
 			face : 'face',
 			side : 'side'
 		},
-		wrapper : 'diceHolder',
-		xRange : [8, 16],  // min and max turns in x axis
-		yRange : [8, 16],  // min and max turns in y axis
+		wrapper : 'diceHolder',	// parent element
+		xRange : [0, 20],  // min and max turns in x axis
+		yRange : [0, 20],  // min and max turns in y axis
 	});
-  
+	
+	// get animation result
+	var result = Dice.animate();
+	console.log(result);
 </script>
 ```
-If you specified to create and animate dice you can trigger it this way:
+If you specified to create and animate dice you can trigger it this way from the HTML:
 ```html
 <button id="button" onclick="Dice.animate()">Animate</button>
 <div id="result"></div>
 ```
-Or this way directly in the JavaScript (you can even pass a callback!):
+Or this way directly in the JavaScript where you can save the return value of the method:
 ```javascript
 document.getElementById('button').addEventListener('click', function () {
-	Dice.animate(function () {
-		document.getElementById('result').innerHTML = 'Result: ' + result;
-	});
+	// you can optionally pass a call back to animate()!
+	var result = Dice.animate();
+	document.getElementById('result').innerHTML = 'Result: ' + result;
 });
 ```
-When animating be sure to add the following rules to your CSS stylesheet:
+When animating be sure to add the following rules to your CSS stylesheet (you may modify):
 ```css
 .diceBox {
   float: left;
@@ -84,8 +89,8 @@ Also don't forget the rules for all sides of the cube (optionally with images):
 /* one of six ... */
 .side1  {
   background-image: url(../img/face1.svg);
+  background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
 }
 ```
 Roadmap
