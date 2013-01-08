@@ -86,8 +86,8 @@ Also don't forget the rules for all sides of the cube (optionally with images):
 /* one of six ... */
 .side1  {
   background-image: url(../img/face1.svg);
+  background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
 }
 ```
 Roadmap
