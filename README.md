@@ -52,7 +52,6 @@ If you specified to create and animate dice you can trigger it this way from the
 Or this way directly in the JavaScript where you can save the return value of the method:
 ```javascript
 document.getElementById('button').addEventListener('click', function () {
-	
 	// you can optionally pass a call back to animate()!
 	var result = Dice.animate();
 	document.getElementById('result').innerHTML = 'Result: ' + result;
