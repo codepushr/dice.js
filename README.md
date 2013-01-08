@@ -38,8 +38,8 @@ When animating define additional arguments and optionally override some default 
 			side : 'side'
 		},
 		wrapper : 'diceHolder',	// parent element
-		xRange : [8, 16],  // min and max turns in x axis
-		yRange : [8, 16],  // min and max turns in y axis
+		xRange : [0, 20],  // min and max turns in x axis
+		yRange : [0, 20],  // min and max turns in y axis
 	});
   
 </script>
