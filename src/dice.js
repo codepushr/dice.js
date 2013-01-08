@@ -147,6 +147,10 @@ var Dice = Dice || (function () {
             diceTurns, 
             diceResult;
 
+        while (wrapper.firstChild) {
+            wrapper.removeChild(wrapper.firstChild);
+        }
+
         for (var i = 0; i < _diceNumber; i ++) {
             diceBox = fnCreateElement('div', 'dice_' + i, _args.diceCls.box);
             renderBoxWithCSS(diceBox);
