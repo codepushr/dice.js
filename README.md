@@ -26,7 +26,7 @@ When animating define additional arguments and optionally override some default 
 	// define animation
 	Dice.init(14, 1, { animate : true });
 	
-	// override some default values
+	// or override some more default values
 	Dice.init(14, 1, {
 		animate : true,
 		debug : true, 
